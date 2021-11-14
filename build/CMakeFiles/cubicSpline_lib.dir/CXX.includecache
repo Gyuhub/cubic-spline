@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gyubuntu/Temp/src/cubicSpline.cpp
+math.h
+-
+iostream
+-
+fstream
+-
+Eigen/Dense
+-
+Eigen/Geometry
+-
+

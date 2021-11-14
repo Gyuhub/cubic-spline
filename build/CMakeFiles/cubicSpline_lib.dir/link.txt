@@ -1,0 +1,2 @@
+/usr/bin/ar qc bin/lib/libcubicSpline_lib.a  CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o
+/usr/bin/ranlib bin/lib/libcubicSpline_lib.a
