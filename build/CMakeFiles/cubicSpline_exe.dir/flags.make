@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gyubuntu/Temp/include 
+CXX_INCLUDES = -I/home/kist/cubic-spline/include 
 

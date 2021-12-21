@@ -4,6 +4,7 @@
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
 // #include "trajectory.h"
+// #include "child.h"
 
 using namespace std;
 using namespace Eigen;
@@ -38,10 +39,8 @@ Matrix3d Theta(Vector4d x)
     return mat;
 }
 
-// Trajectory traj;
-
 int main() {
-    double theta0_ = 30.0 * DEG2RAD, theta1_ = 30.0 * DEG2RAD, theta2_ = -60.0 * DEG2RAD, theta3_ = 30.0 * DEG2RAD, theta4_ = 50.0 * DEG2RAD;
+    double theta0_ = 0.0 * DEG2RAD, theta1_ = 90.0 * DEG2RAD, theta2_ = -45.0 * DEG2RAD, theta3_ = 90.0 * DEG2RAD, theta4_ = 90.0 * DEG2RAD;
     _R[0] << cos(theta0_) , -sin(theta0_) ,  0
         ,  sin(theta0_) ,  cos(theta0_) ,  0
         ,   0           ,   0           ,  1;
@@ -57,15 +56,24 @@ int main() {
     _R[4] << cos(theta4_) , -sin(theta4_) ,  0
         ,  sin(theta4_) ,  cos(theta4_) ,  0
         ,   0           ,   0           ,  1;
+    _R[0] = _R[0];
+    _R[1] = _R[0] * _R[1];
+    _R[2] = _R[0] * _R[1] * _R[2];
+    _R[3] = _R[0] * _R[1] * _R[2] * _R[3];
+    _R[4] = _R[0] * _R[1] * _R[2] * _R[3] * _R[4];
     Quaterniond q0, q1, q2, q3, q4, q;
     q0 = _R[0];
     q1 = _R[1];
     q2 = _R[2];
     q3 = _R[3];
     q4 = _R[4];
-    q = (_R[0] * _R[1] * _R[2] * _R[3] * _R[4]);
+    q = _R[4];
+    // q = (_R[0] * _R[1] * _R[2] * _R[3] * _R[4]);
     cout << "Target Rotation Matrix to Quaternion\n0 : " << q0.coeffs().transpose() << "\n1 : " << q1.coeffs().transpose() << "\n2 : " << q2.coeffs().transpose() << "\n3 : " << q3.coeffs().transpose() << "\n4 : " << q4.coeffs().transpose() << '\n';
     cout << "Total Rotation Matrix from 0 to 4\nTotal : " << q.coeffs().transpose() << '\n';
+    ///////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////// Preprocessing for i = 0 to n ///////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     for (int i = 1; i <= 4; i++)
     {
         double phi = ((_R[i-1]*_R[i]).trace() - 1.0) / 2.0;
@@ -77,6 +85,9 @@ int main() {
         _q[i].head(3) = psi * sqrt((1.0 - phi) / 2.0) / psi.norm();
         _q[i](3) = sqrt((1.0 + phi) / 2.0);
     }
+    //////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////// Initialization /////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////
     _c[0] = Eigen::Vector4d::Zero(4);
     Vector4d b0;
     b0 = Omega(_c[0]) * _c[0];
@@ -87,8 +98,11 @@ int main() {
     z(3) = 1.0;
     _a[0] = _q[1] - _b[0] - _c[0] - z;
     ofstream quaternion, rotmat;
-    quaternion.open("/home/gyubuntu/Temp/quaternion.txt");
-    rotmat.open("/home/gyubuntu/Temp/rotmat.txt");
+    quaternion.open("/home/kist/cubic-spline/quaternion.txt");
+    rotmat.open("/home/kist/cubic-spline/rotmat.txt");
+    ///////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////// Iteration for i = 2 to n /////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     for (int i = 2; i <= 4; i++)
     {
         Vector4d s_, t_, u_; s_.setZero(); t_.setZero(); u_.setZero();
@@ -100,6 +114,9 @@ int main() {
         _a[i - 1] = s_ - _b[i - 1] - _c[i - 1] - z;
         // cout << i << ": a[" << _a[i -1].transpose() << "], b[" << _b[i - 1].transpose() << "], c[" << _c[i - 1].transpose() << "]\n\n";
     }
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////// Result //////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
     Matrix3d R;R.setZero();
     for (double t = _time; _time <= _time_end; _time = _time + _dt)
     {
@@ -138,5 +155,10 @@ int main() {
     }
     rotmat.close();
     quaternion.close();
+
+    // Quaterniond q;
+    // q = Matrix3d::Identity(3, 3);
+    // cout << q.coeffs().transpose() << '\n';
+    // cout << q.toRotationMatrix() << '\n';
     return 0;
 }

@@ -1,8 +1,8 @@
-/home/gyubuntu/Temp/build/CMakeFiles/install/strip.dir
-/home/gyubuntu/Temp/build/CMakeFiles/install/local.dir
-/home/gyubuntu/Temp/build/CMakeFiles/cubicSpline_exe.dir
-/home/gyubuntu/Temp/build/CMakeFiles/cubicSpline_lib.dir
-/home/gyubuntu/Temp/build/CMakeFiles/list_install_components.dir
-/home/gyubuntu/Temp/build/CMakeFiles/edit_cache.dir
-/home/gyubuntu/Temp/build/CMakeFiles/rebuild_cache.dir
-/home/gyubuntu/Temp/build/CMakeFiles/install.dir
+/home/kist/cubic-spline/build/CMakeFiles/install/local.dir
+/home/kist/cubic-spline/build/CMakeFiles/install.dir
+/home/kist/cubic-spline/build/CMakeFiles/list_install_components.dir
+/home/kist/cubic-spline/build/CMakeFiles/rebuild_cache.dir
+/home/kist/cubic-spline/build/CMakeFiles/edit_cache.dir
+/home/kist/cubic-spline/build/CMakeFiles/install/strip.dir
+/home/kist/cubic-spline/build/CMakeFiles/cubicSpline_exe.dir
+/home/kist/cubic-spline/build/CMakeFiles/cubicSpline_lib.dir

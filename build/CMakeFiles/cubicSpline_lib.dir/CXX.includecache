@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/gyubuntu/Temp/src/cubicSpline.cpp
+../include/child.h
+trajectory.h
+../include/trajectory.h
+
+../include/trajectory.h
+iostream
+-
+Eigen/Dense
+-
+Eigen/Geometry
+-
+
+/home/kist/cubic-spline/src/cubicSpline.cpp
 math.h
 -
 iostream
@@ -17,4 +29,8 @@ Eigen/Dense
 -
 Eigen/Geometry
 -
+trajectory.h
+/home/kist/cubic-spline/src/trajectory.h
+child.h
+/home/kist/cubic-spline/src/child.h
 

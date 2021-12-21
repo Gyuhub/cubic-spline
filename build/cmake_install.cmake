@@ -1,4 +1,4 @@
-# Install script for directory: /home/gyubuntu/Temp
+# Install script for directory: /home/kist/cubic-spline
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/bin/cubicSpline_exe"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/build/bin" TYPE EXECUTABLE FILES "/home/gyubuntu/Temp/build/cubicSpline_exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/build/bin" TYPE EXECUTABLE FILES "/home/kist/cubic-spline/build/cubicSpline_exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/bin/cubicSpline_exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/build/bin/cubicSpline_exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -61,5 +61,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gyubuntu/Temp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kist/cubic-spline/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

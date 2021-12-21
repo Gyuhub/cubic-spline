@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gyubuntu/Temp/src/cubicSpline.cpp" "/home/gyubuntu/Temp/build/CMakeFiles/cubicSpline_exe.dir/src/cubicSpline.cpp.o"
+  "/home/kist/cubic-spline/src/cubicSpline.cpp" "/home/kist/cubic-spline/build/CMakeFiles/cubicSpline_exe.dir/src/cubicSpline.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gyubuntu/Temp/build/CMakeFiles/cubicSpline_lib.dir/DependInfo.cmake"
+  "/home/kist/cubic-spline/build/CMakeFiles/cubicSpline_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

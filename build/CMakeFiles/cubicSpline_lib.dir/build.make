@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gyubuntu/Temp
+CMAKE_SOURCE_DIR = /home/kist/cubic-spline
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gyubuntu/Temp/build
+CMAKE_BINARY_DIR = /home/kist/cubic-spline/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cubicSpline_lib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/cubicSpline_lib.dir/flags.make
 
 CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o: CMakeFiles/cubicSpline_lib.dir/flags.make
 CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o: ../src/cubicSpline.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gyubuntu/Temp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o -c /home/gyubuntu/Temp/src/cubicSpline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kist/cubic-spline/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o -c /home/kist/cubic-spline/src/cubicSpline.cpp
 
 CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gyubuntu/Temp/src/cubicSpline.cpp > CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kist/cubic-spline/src/cubicSpline.cpp > CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.i
 
 CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gyubuntu/Temp/src/cubicSpline.cpp -o CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kist/cubic-spline/src/cubicSpline.cpp -o CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.s
 
 CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o.requires:
 
@@ -91,7 +91,7 @@ cubicSpline_lib_EXTERNAL_OBJECTS =
 bin/lib/libcubicSpline_lib.a: CMakeFiles/cubicSpline_lib.dir/src/cubicSpline.cpp.o
 bin/lib/libcubicSpline_lib.a: CMakeFiles/cubicSpline_lib.dir/build.make
 bin/lib/libcubicSpline_lib.a: CMakeFiles/cubicSpline_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gyubuntu/Temp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library bin/lib/libcubicSpline_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kist/cubic-spline/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library bin/lib/libcubicSpline_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/cubicSpline_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cubicSpline_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/cubicSpline_lib.dir/clean:
 .PHONY : CMakeFiles/cubicSpline_lib.dir/clean
 
 CMakeFiles/cubicSpline_lib.dir/depend:
-	cd /home/gyubuntu/Temp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gyubuntu/Temp /home/gyubuntu/Temp /home/gyubuntu/Temp/build /home/gyubuntu/Temp/build /home/gyubuntu/Temp/build/CMakeFiles/cubicSpline_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kist/cubic-spline/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kist/cubic-spline /home/kist/cubic-spline /home/kist/cubic-spline/build /home/kist/cubic-spline/build /home/kist/cubic-spline/build/CMakeFiles/cubicSpline_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cubicSpline_lib.dir/depend
 
